@@ -1,35 +1,27 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarkov Strat Roulette</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
+    <div id="header" class="center-contents">
+        <h1>Tarkov Strat Roulette</h1>
+        <p>Based on a <a href="https://www.reddit.com/r/EscapefromTarkov/comments/j9mazy/escape_from_tarkov_strat_roulette_edition/">Reddit post</a> by u/svppho</p>
+    </div>
+    <div class="roulette-cont center-contents">
+        <h2 id="strat-name"></h2>
+        <p id="strat-desc" class="center-text">Click New Strategy and Start the Game</p>
+    </div>
+    <div id="button-cont" class="center-contents">
+        <button id="new-strat-button" onclick="button_press()">New Strategy</button>
+    </div>
+    <div id="footer" class="center-contents">
+        <p>Send submissions to <a href="mailto:submission.tarkovroulette@gmail.com">submission.tarkovroulette@gmail.com</a></p>
+    </div>
+    <script src="main.js"></script>
 </body>
-
 </html>
