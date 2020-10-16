@@ -23,6 +23,12 @@ var challenges = [
     {"Mom and Dad Are Fighting Again…": " You may not use any item sold by Prapor or Therapist. They aren’t talking to each other and just need to be left alone for a raid."},
     {"Did You Change The Clocks?": " You have 10 mins until the raid ends. Once 10 mins has passed head straight for the exit."},
     {"History of Warfare": "Fight through the ages over a multi-run adventure. Your weapons are as follows: Mosin-Nagant (1891) > PPSH (1941) > SKS (1944) > AKM (1959) > AK-74+Variants (1970) > M4A1 (1994) > MPX (2013). You can use whatever weapons you wish for this challenge, as long as there is a timeline you are following."},
+    {"Like Tears in the Rain": "You must run Shoreline at night while it’s raining. Climb to the roof of resort and leap from the roof onto the ambulance by sky bridge. Once your legs are broken and you basically dead, hunt down the android known as Sanitar. You may not use injectors or health items after leaping from the roof. This must be done within 25 mins of the raid start. Unless you spawn in the Northwest on a Tuesday after 7:00pm PST then it must be done within 20 mins."},
+    {"Who Will Save the World?": "Dress as soviets in Afghanistan: 6b43 Zabralo, unmodded ak74, tank helmet."},
+    {"Black Hawk DOwn": "Cosplay as delta force in Mogadishu."},
+
+    {"American Sniper": "Bring a sniper rifle to any map, setup in a location and stay there until you die or are killed."},
+    {"Friendly Fire": "(In a group) At the start of the raid, everyone has 15 seconds to spread out, after that you must fight until there is only 1 man left standing."},
 ]
 
 function new_challenge() {
