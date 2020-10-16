@@ -28,9 +28,12 @@ var challenges = [
     {"Black Hawk Down": "Cosplay as delta force in Mogadishu."},
     {"American Sniper": "Bring a sniper rifle to any map, setup in a location and stay there until you die or are killed."},
     {"Friendly Fire": "(In a group) At the start of the raid, everyone has 15 seconds to spread out, after that you must fight until there is only 1 man left standing."},
+    {"Liftman": "Labs, camp the elevators."},
+    {"Time is Money": "Labs. Don't. Stop. Moving."},
+    {"Vacation": "Take a relaxing trip to the Shoreline resort, choose a room and relax in it until you are disturbed. Unsuppressed weapons only, and nothing covering your beautiful face."}
 ]
 
-var past_three = []
+var past_three = [];
 
 function new_challenge() {
     var num_challenges = challenges.length;
