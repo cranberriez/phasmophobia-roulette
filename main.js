@@ -38,7 +38,7 @@ function present_challenge(chal) {
 
     var desc = chal[Object.keys(chal)[0]];
     var desc_element = document.getElementById("strat-desc");
-    if (desc.length > 50) {
+    if (desc.length > 150) {
         desc_element.classList.add("justify-text");
     }
     else {
