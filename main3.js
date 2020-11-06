@@ -53,14 +53,14 @@ var challenges = {
         "All other players can only refer to the guard as “pig”",
         "Other players can use candles"
     ],
-    "Found footage": [
+    "Found Footage": [
         "1 person must stay in the van the whole time",
         "Only the person in the van can use the radio",
         "Every other player needs to wear a Go Pro",
         "The other players cannot return to the truck after they’ve entered",
         "Recommend bring equipment to the door of the building"
     ],
-    "Trust exercise Work in progress": [
+    "Trust Exercise": [
         "One person must stay in the truck and guide the “blind”",
         "One person in the “blind” group can communicate with the guide",
         "Everyone else is a mute"
