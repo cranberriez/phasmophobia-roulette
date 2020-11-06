@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarkov Strat Roulette</title>
+    <title>Phasmophobia Strat Roulette</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="header" class="center-contents">
-        <h1>Tarkov Strat Roulette</h1>
-        <p>Based on a <a href="https://www.reddit.com/r/EscapefromTarkov/comments/j9mazy/escape_from_tarkov_strat_roulette_edition/">Reddit post</a> by u/svppho</p>
+        <h2>Phasmophobia Strat Roulette</h1>
     </div>
-    <div class="roulette-cont center-contents">
-        <h2 id="strat-name"></h2>
-        <p id="strat-desc" class="center-text">Click New Strategy and Start the Game</p>
+    <div id="roulette" class="roulette-cont center-contents">
+        <h3 id="strat-name"></h3>
+        <p id="strat-intro" class="center-text">Click New Strategy</p>
     </div>
     <div id="button-cont" class="center-contents">
         <button id="new-strat-button" onclick="button_press()">New Strategy</button>
     </div>
-    <div id="footer" class="center-contents">
-        <p>Send submissions to <a href="mailto:submission.tarkovroulette@gmail.com">submission.tarkovroulette@gmail.com</a></p>
-    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
