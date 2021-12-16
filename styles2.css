@@ -61,7 +61,7 @@ body p {
 
 .roulette-cont #strat-intro {
     width: 60vw;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .roulette-cont ul {
@@ -70,6 +70,20 @@ body p {
 
 .roulette-cont ul li {
     margin-bottom: 10px;   
+    font-size: 24px;
+}
+
+li.special-player.red {
+    color: #e74c3c;
+}
+li.special-player.blue {
+    color: #3498db;
+}
+li.special-player.green {
+    color: #27ae60;
+}
+li.special-player.purple {
+    color: #9b59b6;
 }
 
 .center-text {
