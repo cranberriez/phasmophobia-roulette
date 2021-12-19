@@ -276,7 +276,7 @@ challenges = {
         "They can communicate via discord or other forms",
         "The ghost can only respond in the form of a question"
     ],
-    "Should Mounted Flashlights?": [
+    "Shoulder Mounted Flashlights?": [
         "Can only use flashlights while they are in your hand"
     ],
     "The Conjurer": [
@@ -284,5 +284,15 @@ challenges = {
         "They can choose whether or not to tell the team about their new role",
         "The conjurer should try to hide the object and choose a good time to use it",
         "They can only leave once they've gotten someone killed or the ghost has been figured out"
+    ],
+    "Nightmare on Elm Stret": [
+        "Normal House on Nightmare",
+        "Your choice between Edgefield and Ridgeview"
+    ],
+    "Hide and Seek": [
+        "One player is the seeker",
+        "Everyone else has a minute to hide once the front door is opened",
+        "Once everyone has been found, you can start to search for the ghost",
+        "If everyone is found quickly, the new seeker is the last person found"
     ]
 }
