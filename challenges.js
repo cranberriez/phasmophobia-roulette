@@ -278,5 +278,11 @@ challenges = {
     ],
     "Should Mounted Flashlights?": [
         "Can only use flashlights while they are in your hand"
+    ],
+    "The Conjurer": [
+        "The first person to locate the cursed object becomes the conjurer",
+        "They can choose whether or not to tell the team about their new role",
+        "The conjurer should try to hide the object and choose a good time to use it",
+        "They can only leave once they've gotten someone killed or the ghost has been figured out"
     ]
 }
