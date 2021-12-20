@@ -1,5 +1,19 @@
-const repeat_wait = challenges.length
+const repeat_wait = challenges.length - challenges.length / 10
 let past_challenges = []
+let chal_count = 1
+
+function strat_count(change) {
+    chal_count += change;
+    if (chal_count <= 1) {
+        chal_count = 1;
+        $("#new-strat-button").text("New Strategy")
+        return
+    }
+    else if (chal_count >= 4) {
+        chal_count = 4;
+    }
+    $("#new-strat-button").text(`${chal_count} New Strategies`)
+}
 
 function rand_difficulty() {
     let difficulties = ["Easy","Intermediate","Professional","NIGHTMARE"]
@@ -50,13 +64,30 @@ function new_li(text, classes = []) {
     return li
 }
 
+function get_challenge() {
+    let loop = true
+    let chal = new_challenge()
+    while (loop) {
+        loop = check_repeat(chal)
+        chal = new_challenge()
+    }
+    return chal
+}
+
+function clear_challenge() {
+    document.getElementById("strat-name").innerHTML = ""
+    $("#roulette ul").remove()
+}
+
 function present_challenge(num) {
     let name = Object.keys(challenges)[num]
     let desc = challenges[name]
 
-    document.getElementById("strat-name").innerHTML = name
-
-    $("ul").remove()
+    let strat_title = document.getElementById("strat-name")
+    if (strat_title.innerHTML.length > 0) {
+        document.getElementById("strat-name").innerHTML += " + "
+    }
+    document.getElementById("strat-name").innerHTML += name
 
     let uList = document.createElement("ul")
     uList.classList.add("center-text")
@@ -98,12 +129,8 @@ function check_repeat(chal) {
 }
 
 function button_press() {
-    let loop = true
-    let chal = new_challenge()
-    while (loop) {
-        chal = new_challenge()
-        loop = check_repeat(chal)
+    clear_challenge()
+    for (let i = 0; i < chal_count; i++) {
+        present_challenge(get_challenge())
     }
-
-    present_challenge(chal)
 }

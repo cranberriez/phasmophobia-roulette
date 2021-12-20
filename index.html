@@ -9,6 +9,11 @@
 </head>
 <body>
     <main class="layout-grid">
+        <div id="past-challenges">
+            <ul>
+
+            </ul>
+        </div>
         <div id="main-contents">
             <div id="header" class="center-contents">
                 <h2>Phasmophobia Strat Roulette</h1>
@@ -17,9 +22,14 @@
                 <h3 id="strat-name"></h3>
                 <p id="strat-intro" class="center-text">Click New Strategy</p>
             </div>
-            <div id="button-cont" class="center-contents">
+            <div id="button-cont">
+                <button id="dec-strats" onclick="strat_count(-1)">-</button>
                 <button id="new-strat-button" onclick="button_press()">New Strategy</button>
+                <button id="inc-strats" onclick="strat_count(1)">+</button>
             </div>
+        </div>
+        <div id="settings">
+            
         </div>
     </main>
 
