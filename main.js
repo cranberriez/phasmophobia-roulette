@@ -1,4 +1,4 @@
-const repeat_wait = challenges.length - challenges.length / 10
+const repeat_wait = challenges.length - 5
 let past_challenges = []
 let chal_count = 1
 
