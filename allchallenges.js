@@ -12,7 +12,7 @@ challenges = {
         "No going back to truck until you want to leave",
         "No sanity pills"
     ],
-    "Im finna piss myself": [
+    "Im gonna cry": [
         "No crucifix",
         "Always split up from one another"
     ],
@@ -38,11 +38,6 @@ challenges = {
     "“With the Frizz, no way!!”": [
         "Highschool on Nightmare"
     ],
-    "“Come at me ya pussy bitch!”": [
-        "Must insult and attract the ghost during every hunt.",
-        "Can’t hide, must run",
-        "No crucifix"
-    ],
     "The Security Guard": [
         "Only one person can have a flashlight, they are the security guard (not including UV)",
         "All other players can only refer to the guard as “pig”",
@@ -56,7 +51,7 @@ challenges = {
     "20 Questions": [
         "Only one person can speak",
         "Everyone else is a mute",
-        "Mute people can respond only with yes or no"
+        "Mute people can only say yes or no"
     ],
     "Sacrifice! Sacrifice! Sacrifice!": [
         "Play the game normally until a hunt is happening",
@@ -69,7 +64,7 @@ challenges = {
     ],
     "Only Starting Equipment": [
         "Don’t add ANYTHING before the game, good luck",
-        "If you’re playing with more than 1 person, you may add 1 normal flashlight per person"
+        "If you’re playing with more than 1 person, you may add 1 flashlight per person"
     ],
     "Trust Exercise (Hard)": [
         "All players wear GoPros.",
@@ -259,17 +254,6 @@ challenges = {
         "Consumed items must also be returned.",
         "If a player dies, the armourer must collect their dropped gear themselves.",
         "If the armourer dies, no additional items may be taken."
-    ],
-    "Dommy Mommy": [
-        "The special player is the dommy mommy",
-        "All players must do exactly as told by the dommy mommy",
-        "Permission must be given to do anything and everything"
-    ],
-    "Bottom Bitch": [
-        "The special player is the bottom bitch",
-        "They must stay crouched at all times",
-        "The have to do anything anybody asks them to, no questions asked",
-        "They must cower in fear in place when a hunt starts, unless told to run"
     ],
     "The Ghost": [
         "The first player to die is \"The Ghost\"",
