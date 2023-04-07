@@ -31,14 +31,14 @@ main.layout-grid {
     grid-template-areas: ". content .";
 }
 
-div#past-challenges {
+#past-challenges {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-div#main-contents {
+#main-contents {
     grid-area: content;
     display: flex;
     align-items: center;
@@ -87,6 +87,8 @@ body p {
 .roulette-cont #strat-desc {
     font-size: 24px;
     line-height: 48px;
+
+    max-width: 1000px;
 }
 
 li.special-player.red {
@@ -111,17 +113,6 @@ li.special-player.purple {
     text-justify: inter-word;
 }
 
-/* When Full Screen */
-@media screen and (min-width: 600px) { 
-    .justify-text {
-        text-align: center;
-    }
-
-    #past-challenges {
-        display: none;
-    }
-}
-  
 body #button-cont {
     width: 100%;
     height: 20vh;
@@ -162,6 +153,7 @@ body button#new-strat-button:hover {
 
 #past-challenges h3 {
     margin-bottom: 30px;
+    text-align: left;
 }
 
 #chal-history {
@@ -185,3 +177,8 @@ body button#new-strat-button:hover {
     text-decoration: underline;
 }
 
+@media only screen and (max-width: 750px) {
+    #past-challenges {
+        display: none;
+    }
+}
