@@ -1,121 +1,69 @@
+const challenges = gameModes
 const repeat_wait = challenges.length - 5
 let past_challenges = []
-let chal_count = 1
+let last_chal = null;
 
-function strat_count(change) {
-    chal_count += change;
-    if (chal_count <= 1) {
-        chal_count = 1;
-        $("#new-strat-button").text("New Strategy")
-        return
-    }
-    else if (chal_count >= 4) {
-        chal_count = 4;
-    }
-    $("#new-strat-button").text(`${chal_count} New Strategies`)
-}
+$(function() {
+    $("#chal-history").on('click', 'li', function() {
+        let index = $(this).data('index')
+        go_to_challenge(index, $(this))
+    })
+})
 
-function rand_difficulty() {
-    let difficulties = ["Easy","Intermediate","Professional","NIGHTMARE"]
-
-    let len = difficulties.length
-    let random = Math.floor(Math.random() * len)
-
-    return difficulties[random]
-}
-
-function rand_player() {
-    let players = ["Red", "Blue", "Green", "Purple"]
-
-    let len = players.length
-    let random = Math.floor(Math.random() * len)
-
-    return players[random]
-}
-
-function rand_map() {
-    let maps=[{name:"Willow Street House",size:"tiny"},{name:"Tanglewood Street House",size:"tiny"},{name:"Edgefield Street House",size:"small"},{name:"Ridgeview Street House",size:"small"},{name:"Grafton Farmhouse",size:"small"},{name:"Bleasdale Farmhouse",size:"medium"},{name:"Maple Lodge Campsite",size:"medium"},{name:"High School",size:"large"},{name:"Prison",size:"large"},{name:"Asylum",size:"massive"}]
-    
-    let len = maps.length
-    let random = Math.floor(Math.random() * len)
-
-    return maps[random]
-}
-
-function check_special(text) {
-    if (text.includes("special") || text.includes("one person"))
-        return true
+function go_to_challenge(index, item) {
+    item.remove();
+    present_challenge(index, true)
 }
 
 function new_challenge() {
     let len = Object.keys(challenges).length
-    let random = Math.floor(Math.random() * len)
-
-    return random
-}
-
-function new_li(text, classes = []) {
-    let li = document.createElement("li")
-    li.innerHTML = text
-    for (let i = 0; i < classes.length; i++) {
-        li.classList.add(classes[i])
-    }
-
-    return li
+    return Math.floor(Math.random() * len)
 }
 
 function get_challenge() {
-    let loop = true
     let chal = new_challenge()
-    while (loop) {
-        loop = check_repeat(chal)
-        chal = new_challenge()
+    if (check_repeat(chal)) {
+        return get_challenge()
+    } else {
+        return chal
     }
-    return chal
 }
 
 function clear_challenge() {
     document.getElementById("strat-name").innerHTML = ""
-    $("#roulette ul").remove()
-}
-
-function present_challenge(num) {
-    let name = Object.keys(challenges)[num]
-    let desc = challenges[name]
-
-    let strat_title = document.getElementById("strat-name")
-    if (strat_title.innerHTML.length > 0) {
-        document.getElementById("strat-name").innerHTML += " + "
-    }
-    document.getElementById("strat-name").innerHTML += name
-
-    let uList = document.createElement("ul")
-    uList.classList.add("center-text")
-
-    let special_player = false
-    for (let i = 0; i < desc.length; i++) {
-        const e = desc[i]
-        if (check_special(e))
-            special_player = true
-        let li = new_li(e)
-        uList.append(li)
-    }
-
-    if (special_player) {
-        let li = document.createElement("li")
-        li.classList.add("special-player")
-        let player = rand_player()
-        li.classList.add(player.toLowerCase())
-        li.innerHTML = `<br/>Special Player: ${player}`
-        uList.append(li)
-    }
-    
-    $("#roulette").append(uList)
     $("#strat-intro").remove()
 }
 
-function check_repeat(chal) {
-    if (past_challenges.includes(chal)) {
+function add_to_history(index) {
+    // Create a new list item with a data attribute of "index"
+    const newItem = $("<li>").text(challenges[index].name).attr("data-index", index);
+
+    // Append the new item to the top of the list
+    $("#chal-history").prepend(newItem);
+
+    // Check if the list has a length of 5
+    if ($("#chal-history li").length > 10) {
+        // If the list has a length of 5, remove the last item
+        $("#chal-history li:last-child").remove();
+    }
+}
+function present_challenge(index, goto = false) {
+    let challenge = challenges[index]
+    let name = challenge.name
+    let desc = challenge.description
+
+    if (last_chal !== null)
+        add_to_history(last_chal)
+
+    last_chal = index
+
+    $("#strat-name").text(name)
+    $("#strat-desc ").text(desc)
+    $("#strat-intro").remove()
+}
+
+function check_repeat(index) {
+    if (past_challenges.includes(index)) {
         return true
     }
     else {
@@ -123,14 +71,12 @@ function check_repeat(chal) {
             past_challenges.pop()
         }
 
-        past_challenges.unshift(chal)
+        past_challenges.unshift(index)
         return false
     }
 }
 
 function button_press() {
     clear_challenge()
-    for (let i = 0; i < chal_count; i++) {
-        present_challenge(get_challenge())
-    }
+    present_challenge(get_challenge())
 }
